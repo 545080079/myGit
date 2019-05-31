@@ -1856,8 +1856,9 @@ void open8266()	//esp8266.h封装	一次命令
 							
 					   if((Usart_Receive[0]=='+')&&(Usart_Receive[1]=='I')&&(Usart_Receive[2]=='P'))
 					   {		 
-		 			   	      
-						  	  write_com(0x80);
+		 			   	       if(Usart_Receive[7]=='a')
+		 			   	       {
+		 			   	       	 write_com(0x80);
 					
 							  	for(num=0;num<16;num++)//显示提示语
 							{
@@ -1883,6 +1884,8 @@ void open8266()	//esp8266.h封装	一次命令
 							menusw=0;
 							
 							 break;
+								   }
+						  	 
 					   }
 					}		   
 					//end test
