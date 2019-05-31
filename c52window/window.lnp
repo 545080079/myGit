@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"window.obj" 
+TO "window" 
+RAMSIZE(256) 
